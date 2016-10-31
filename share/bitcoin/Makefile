@@ -1,10 +1,13 @@
+BITCOIND=bitcoind -datadir=.
+BITCOIN_CLI=bitcoin-cli -datadir=.
+
 N ?= 1
 
 run:
-	bitcoind -datadir=.
+	${BITCOIND}
 
 gen:
-	bitcoin-cli -datadir=. generate ${N}
+	${BITCOIN_CLI} generate ${N}
 
 clean:
 	rm -rv banlist.dat blocks/ chainstate/ db.log debug.log \
