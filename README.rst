@@ -17,7 +17,7 @@ Settings
 
     urlpatterns = [
         ...
-        url(r'^browser/', include('browser.urls', namespace='browser')),
+        url(r'^browser/', include('chain_browser.urls', namespace='browser')),
     ]
 
 
