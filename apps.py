@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class BrowserConfig(AppConfig):
-    name = 'browser'
+class ChainBrowserConfig(AppConfig):
+    name = 'chain_browser'
