@@ -1,3 +1,6 @@
 *.py[co]
 build.js
 node_modules
+
+share/bitcoin/*
+!share/bitcoin/bitcoin.conf
