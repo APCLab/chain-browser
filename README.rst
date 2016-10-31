@@ -26,6 +26,7 @@ Development Setup
 
 ::
 
+    cd static
     npm install
 
 

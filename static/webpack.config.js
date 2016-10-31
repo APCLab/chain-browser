@@ -3,10 +3,10 @@ const webpack = require('webpack')
 
 module.exports = {
 	entry: {
-    app: './chain_browser/static/js/app.js',
+    app: './js/app.js',
   },
 	output: {
-		path: path.resolve(__dirname, './chain_browser/static/js'),
+		path: path.resolve(__dirname, './js'),
 		filename: 'build.js',
 	},
   resolveLoader: {
