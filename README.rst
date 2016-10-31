@@ -24,6 +24,8 @@ Settings
 Bitcoin Daemon Setup
 ----------------------------------------------------------------------
 
+#. ``cp share/bitcoin/bitcoin.conf.sample share/bitcoin/bitcoin.conf``
+
 #. Change the bitcoind listen port and RPC port in ``share/bitcoin/bitcoin.conf``
 
 #. Start bitcoin daemon with ``-datadir=./share/bitcoin/bitcoin.conf``

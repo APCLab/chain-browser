@@ -3,4 +3,4 @@ build.js
 node_modules
 
 share/bitcoin/*
-!share/bitcoin/bitcoin.conf
+!share/bitcoin/bitcoin.conf.sample
