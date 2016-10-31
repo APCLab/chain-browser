@@ -22,7 +22,10 @@ def blockinfo(request):
     '''
     block_idx = bitcoin_rpc('getblockcount')
 
-    block_start = int(request.GET.get('since', -21))
+    try:
+        block_start = int(request.GET.get('since', -21))
+    except ValueError:
+        block_start = -21
 
     payload = {
         'blockcount': block_idx,
