@@ -15,12 +15,23 @@ def index(request):
 
 
 def blockinfo(request):
+    '''
+    Accept ``GET`` parameters:
+
+        - since
+    '''
     block_idx = bitcoin_rpc('getblockcount')
+
+    block_start = int(request.GET.get('since', -21))
+
     payload = {
         'blockcount': block_idx,
         'blocks': [
             bitcoin_rpc('getblock', bitcoin_rpc('getblockhash', block_idx - i))
-            for i in range(21)
+            for i in range(min(
+                21,
+                block_idx + 1,
+                block_idx - block_start))
         ],
     }
     return JsonResponse(payload)

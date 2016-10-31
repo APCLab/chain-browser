@@ -35,19 +35,34 @@ export default {
   },
   methods: {
     blockinfo(){
-      this.$http.get('blockinfo/').then(
+      let url = 'blockinfo/'
+      if (this.blockcount !== null)
+        url = `blockinfo/?since=${this.blockcount}`
+
+      this.$http.get(url).then(
         res => res.json(),
         res => {
-          console.log(res.json())
+          console.error(res.json())
+          setTimeout(this.blockinfo, 800);
           return null
         }
       ).then(
         data => {
-          if(data === null)
+          if (data === null)
             return
 
-          this.blockcount = data.blockcount
-          this.blocks = data.blocks
+          if (this.blockcount === null) {
+            this.blockcount = data.blockcount
+            this.blocks = data.blocks;
+          }
+          else {
+            this.blockcount = data.blockcount
+            data.blocks.reverse()
+            data.blocks.map(function(val) {
+              this.blocks.pop()
+              this.blocks.unshift(val)
+            }, this)
+          }
 
           setTimeout(this.blockinfo, 800);
         }
