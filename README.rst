@@ -9,7 +9,7 @@ Installation
     cd appmate
     git submodule add https://github.com/APCLab/chain-browser.git chain_browser
 
-    # or
+    # or, if you are not in a git repo
 
     git clone https://github.com/APCLab/chain-browser.git chain_browser
 
@@ -75,5 +75,5 @@ Development Setup
     npm install
 
 
-    npm install -g webpack
+    npm install -g webpack  # install webpack to one of your PATH, if you're not privilege user
     webpack  # or webpack --progress --colors --watch
