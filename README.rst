@@ -9,6 +9,10 @@ Installation
     cd appmate
     git submodule add https://github.com/APCLab/chain-browser.git chain_browser
 
+    # or
+
+    git clone https://github.com/APCLab/chain-browser.git chain_browser
+
 
 Settings
 ----------------------------------------------------------------------
@@ -44,7 +48,7 @@ Settings
 
     BITCOIN_API = 'http://demo:demo@localhost:16002'
 
-``urls.py``::
+In ``urls.py``::
 
     urlpatterns = [
         ...
