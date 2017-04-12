@@ -13,11 +13,18 @@ Installation
 
     git clone https://github.com/APCLab/chain-browser.git chain_browser
 
+Then, install python requirements::
+
+    cd chain_browser
+    pip install -r requirements.txt
+
 
 Settings
 ----------------------------------------------------------------------
 
-``settings.py`` example::
+``settings.py`` example
+
+.. code-block:: python
 
     TEMPLATES = [
         {
